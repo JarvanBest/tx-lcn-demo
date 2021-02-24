@@ -1,0 +1,6 @@
+# Project exclude paths
+/txlcn-client-demo/demo-service-a/target/
+/txlcn-client-demo/demo-service-b/target/
+/txlcn-client-demo/demo-service-c/target/
+/txlcn-client-demo/demo-service-common/target/
+/txlcn-tm/target/

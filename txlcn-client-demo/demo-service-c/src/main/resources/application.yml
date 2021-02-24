@@ -1,0 +1,28 @@
+server:
+  port: 12013
+
+spring:
+  application:
+    name: demo-service-c
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.180:3306/txlcn-demo?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: Db_Zz_123_Db_Zz_123_Db_Zz_123_
+
+tx-lcn:
+  ribbon:
+    loadbalancer:
+      dtx:
+        # 是否启动LCN负载均衡策略(优化选项，开启与否，功能不受影响)
+        enabled: true
+  logger:
+    # 开启日志,默认为false
+    enabled: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://192.168.1.180:3306/tx_logger?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: Db_Zz_123_Db_Zz_123_Db_Zz_123_
+  client:
+    # 默认之配置为TM的本机默认端口
+    manager-address: 127.0.0.1:8070
